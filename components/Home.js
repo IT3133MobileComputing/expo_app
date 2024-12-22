@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import { PaperProvider, Text, Divider } from 'react-native-paper';
+import { PaperProvider, Text, Divider, Button } from 'react-native-paper';
 
 export default function Home() {
     return (
@@ -16,8 +16,11 @@ export default function Home() {
 
                     How such documents are actually stored depends on the file format. For example, HTML uses the  tag as a paragraph container. In plaintext files, there are two common formats. The pre-formatted text will have a newline at the end of every physical line, and two newlines at the end of a paragraph, creating a blank line. An alternative is to only put newlines at the end of each paragraph, and leave word wrapping up to the application that displays or processes the text.
 
-                        A line break that is inserted manually, and preserved when re-flowing, may still be distinct from a paragraph break, although this is typically not done in prose. HTML's <br /> tag produces a line break without ending the paragraph; the W3C recommends using it only to separate lines of verse (where each "paragraph" is a stanza), or in a street address.
+                    A line break that is inserted manually, and preserved when re-flowing, may still be distinct from a paragraph break, although this is typically not done in prose. HTML's tag produces a line break without ending the paragraph; the W3C recommends using it only to separate lines of verse (where each "paragraph" is a stanza), or in a street address.
                 </Text>
+                <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
+                    Press me
+                </Button>
             </View>
         </PaperProvider>
     )
