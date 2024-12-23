@@ -10,12 +10,23 @@ export default function ContactUs() {
             </View>
 
             <View style={styles.body}>
+
                 <View style={styles.input}>
                     <TextInput label="Name" mode="outlined" />
-                    <TextInput label="Email" mode="outlined" />
-                    <TextInput label="Phone Number" mode="outlined" />
-                    <TextInput label="Message" mode="outlined" multiline />
                 </View>
+
+                <View style={styles.input}>
+                    <TextInput label="Email" mode="outlined" keyboardType='email-address'/>
+                </View>
+
+                <View style={styles.input}>
+                    <TextInput label="Phone Number" mode="outlined" keyboardType='number-pad' />
+                </View>
+
+                <View style={styles.input}>
+                    <TextInput label="Message" mode="outlined" multiline numberOfLines={5} />
+                </View>
+
             </View>
 
             <View style={styles.footer}>
@@ -45,6 +56,6 @@ const styles = StyleSheet.create({
     },
     input: {
         padding: 8,
-        marginBottom:7
+        marginBottom: 7
     }
 });
