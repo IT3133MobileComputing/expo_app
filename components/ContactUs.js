@@ -32,6 +32,10 @@ export default function ContactUs() {
                 {/* <Text>{name}</Text> By using this we can check the text values */}
             </View>
 
+            <Button mode="outlined" onPress={() => alert('ContactUs')}>
+                ContactUs
+            </Button>
+
             <View style={styles.footer}>
                 <Text>App Copyright 2024</Text>
             </View>
