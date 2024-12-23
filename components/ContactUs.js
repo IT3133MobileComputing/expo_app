@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import { PaperProvider, Text, Divider } from 'react-native-paper';
+import { PaperProvider, Text, Divider, TextInput } from 'react-native-paper';
 
 export default function ContactUs() {
     return (
@@ -10,7 +10,12 @@ export default function ContactUs() {
             </View>
 
             <View style={styles.body}>
-
+                <View style={styles.input}>
+                    <TextInput label="Name" mode="outlined" />
+                    <TextInput label="Email" mode="outlined" />
+                    <TextInput label="Phone Number" mode="outlined" />
+                    <TextInput label="Message" mode="outlined" multiline />
+                </View>
             </View>
 
             <View style={styles.footer}>
@@ -24,16 +29,22 @@ const styles = StyleSheet.create({
     header: {
         flex: 3,
         width: "100%",
-        alignItems: "center"
+        alignItems: "center",
+        padding: 10,
+        marginBottom: 10
     },
     body: {
         flex: 5,
         width: "100%",
-        alignItems: "center",
+        alignItems: "justify",
     },
     footer: {
         flex: 2,
         width: "100%",
         alignItems: "center",
+    },
+    input: {
+        padding: 8,
+        marginBottom:7
     }
 });
