@@ -1,7 +1,10 @@
 import { StyleSheet, View } from 'react-native';
 import { PaperProvider, Text, Divider, TextInput } from 'react-native-paper';
+import { useState } from 'react';
 
 export default function ContactUs() {
+
+    const [name,setName] = useState();
     return (
         <PaperProvider>
             <View style={styles.header}>
@@ -12,7 +15,7 @@ export default function ContactUs() {
             <View style={styles.body}>
 
                 <View style={styles.input}>
-                    <TextInput label="Name" mode="outlined" />
+                    <TextInput label="Name" mode="outlined" value={name} onChangeText={setName}/>
                 </View>
 
                 <View style={styles.input}>
@@ -26,7 +29,7 @@ export default function ContactUs() {
                 <View style={styles.input}>
                     <TextInput label="Message" mode="outlined" multiline numberOfLines={5} />
                 </View>
-
+                {/* <Text>{name}</Text> By using this we can check the text values */}
             </View>
 
             <View style={styles.footer}>
